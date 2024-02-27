@@ -5,7 +5,7 @@ import styles from './page.module.css'
 import { GoogleGenerativeAI } from '@google/generative-ai'
 import Loader from '@/components/Loader'
 
-// create ur api key in https://console.cloud.google.com/ and enable the generative ai api
+// create ur api key here https://aistudio.google.com/app/apikey
 const API_KEY = process.env.NEXT_PUBLIC_API_KEY
 const Home = () => {
   const [file, setFile] = useState(null)
@@ -152,7 +152,6 @@ const Home = () => {
 
   return (
     <main className={styles.main}>
-      {/* <div className={styles.main__page}> */}
         {getTitle()}
         {getImage()}
         {getInputFile()}
@@ -161,7 +160,6 @@ const Home = () => {
         {getLoader()}
         {getResponse()}
         {getError()}
-      {/* </div> */}
     </main>
   )
 }
