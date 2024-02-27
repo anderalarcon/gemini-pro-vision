@@ -56,7 +56,7 @@ const Home = () => {
 
   const handleFileChange = (event) => {
     const file = event.target.files[0]
-    const allowedTypes = ['image/jpeg', 'image/png', 'image/jpg']
+    const allowedTypes = ['image/jpeg', 'image/png', 'image/jpg', 'image/webp']
     const reader = new FileReader()
     reader.onloadend = () => {
       setFile(reader.result)
@@ -152,7 +152,7 @@ const Home = () => {
 
   return (
     <main className={styles.main}>
-      <div className={styles.main__page}>
+      {/* <div className={styles.main__page}> */}
         {getTitle()}
         {getImage()}
         {getInputFile()}
@@ -161,7 +161,7 @@ const Home = () => {
         {getLoader()}
         {getResponse()}
         {getError()}
-      </div>
+      {/* </div> */}
     </main>
   )
 }

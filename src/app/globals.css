@@ -10,6 +10,12 @@ a {
   text-decoration: none;
 }
 
+body {
+  height: 100vh;
+  background-color: #060606;
+  display: flex;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
