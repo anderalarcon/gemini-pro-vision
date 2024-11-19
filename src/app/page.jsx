@@ -15,6 +15,7 @@ const Home = () => {
   const [error, setError] = useState(null)
 
   const genAI = new GoogleGenerativeAI(API_KEY)
+  const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
   async function fileToGenerativePart(file) {
     const base64EncodedDataPromise = new Promise((resolve) => {
@@ -34,7 +35,6 @@ const Home = () => {
     }
     setResponse(null)
     setLoading(true)
-    const model = genAI.getGenerativeModel({ model: 'gemini-pro-vision' })
 
     try {
       const fileInputEl = document.querySelector('input[type=file]')
