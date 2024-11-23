@@ -7,6 +7,7 @@ import Loader from '@/components/Loader'
 
 // create ur api key here https://aistudio.google.com/app/apikey
 const API_KEY = process.env.NEXT_PUBLIC_API_KEY
+console.log('API_KEY', API_KEY);
 const Home = () => {
   const [file, setFile] = useState(null)
   const [prompt, setPrompt] = useState('')
@@ -74,7 +75,7 @@ const Home = () => {
   }
 
   const getTitle = () => {
-    return <h1 className={styles.main__title}>Gemini Pro Vision Demo</h1>
+    return <h1 className={styles.main__title}>Gemini Pro Vision Demo AAAAAAAAAAAAAAAAAAAAAA</h1>
   }
 
   const getImage = () => {
