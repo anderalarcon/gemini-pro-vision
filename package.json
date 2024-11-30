@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "build-image": "gcloud builds submit --tag us-east1-docker.pkg.dev/eduar-422022/ander/gemini:1.0.5",
+    "deploy": "gcloud run deploy gemini-service --image us-east1-docker.pkg.dev/eduar-422022/ander/gemini:1.0.5 --region us-east1"
   },
   "dependencies": {
     "@google/generative-ai": "^0.2.1",
